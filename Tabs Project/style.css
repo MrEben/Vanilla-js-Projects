@@ -1,12 +1,12 @@
 :root {
     --shadow: 0px 5px 8px rgb(177, 148, 137);
-    --transition: all 0.8s ease-in;
+    --transition: all 0.4s ease-in;
     --border: 2px solid white;
     --border-radius: 0.5rem;
     --border-color: rgb(180, 99, 99, 0.5);
     --primary-colour: rgb(223, 43, 43);
     --secondary-colour: rgb(233, 8, 8);
-    --tertiary-colour: rgb(43, 20, 20);
+    --tertiary-colour: rgb(41, 34, 34);
     --spacing: 2px;
     --color-white:white;
     --radius: 0.5rem;
@@ -112,7 +112,7 @@ html {
     text-transform: capitalize;
     font-size: 1rem;
     display: block;
-    background: grey;
+    background: rgb(185, 125, 125,0.5);
     cursor: pointer;
     transition: var(--transition);
     letter-spacing: var(--spacing);
