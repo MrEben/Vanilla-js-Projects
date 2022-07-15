@@ -23,12 +23,10 @@ body {
 h2 {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    /* padding: 0; */
     color: var(--primary-colour);
 }
 
 h4 {
-    /* padding: 0; */
     text-transform: capitalize;
     letter-spacing: 0.2rem;
 }
@@ -38,7 +36,6 @@ h4 {
 }
 
 .section-center {
-    /* width: 95vw; */
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
