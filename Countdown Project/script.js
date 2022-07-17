@@ -22,22 +22,58 @@ const weekdays = [
   'Saturday',
 ];
 const giveaway = document.querySelector('.giveaway');
-const deadline = document.querySelector('.daedline');
+const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
-const date = new Date(2022, 7, 12, 10, 5);
+const tempDate=new Date();
+const tempYear=tempDate.getFullYear();
+const tempMonth=tempDate.getMonth();
+const tempDay=tempDate.getDate();
+const date = new Date(tempYear, tempMonth, tempDay, 18, 32);
 const year = date.getFullYear();
 const hour = date.getHours();
 const minutes = date.getMinutes()
 const month = date.getMonth();
 const weekday = date.getDay();
 const dates = date.getDate();
-giveaway.textContent = `giveaway ends on ${weekdays[weekday]},${dates} ${months[month]} ${year} ${hour}:0${minutes}am`;
+giveaway.textContent = `giveaway ends on ${weekdays[weekday]},${dates} ${months[month]} ${year} ${hour}:${minutes}pm`;
 const futureTime=date.getTime();
 function getRemainingTime() {
   const today=new Date().getTime();
   const t=date-today;
-  console.log(t);
   const oneDay=24*60*60*1000;
-  console.log(oneDay);
+  const oneHour=60*60*1000;
+  const oneMinute=60*1000;
+  const days=Math.floor(t/oneDay);
+  const hours=Math.floor((t%oneDay)/oneHour);
+  const minutes=Math.floor((t%oneHour)/oneMinute);
+  const seconds=Math.floor((t%oneMinute)/1000);
+  const values=[days,hours,minutes,seconds]
+  function format(item) {
+    if(item<10){
+      return item=`0${item}`
+    }else{
+      return item
+    }
+  };
+
+  items.forEach(function (item,index) {
+    item.innerHTML=format(values[index]);
+  });
+  if(t<0){
+    clearInterval(countdown);
+    deadline.innerHTML=`<h4 class='expired'>Sorry, this offer has expired</h4>`
+  }
+  // This could work too
+  // items[0].innerHTML=values[0]
+  // items[1].innerHTML=values[1]
+  // items[2].innerHTML=values[2]
+  // items[3].innerHTML=values[3]
 };
+const countdown=setInterval(getRemainingTime,1000)
 getRemainingTime();
+// function setColor() {
+//   let x=document.body;
+//   x.style.backgroundColor=
+//   x.style.backgroundColor=='white'?'pink':'white';
+// }
+// setInterval(setColor,1000)

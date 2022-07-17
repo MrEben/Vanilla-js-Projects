@@ -89,3 +89,6 @@ h4 {
     margin-bottom: 0.25rem;
     letter-spacing: var(--spacing);
 }
+.expired{
+    letter-spacing: 0.2rem;
+}
