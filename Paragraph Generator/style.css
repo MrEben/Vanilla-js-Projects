@@ -43,7 +43,7 @@ h3{
 .section-center {
     width: 90vw;
     margin: 0 auto;
-    max-width: 40rem;
+    max-width: 1170px;
     margin-top: 5rem;
     text-align: center;
   }
@@ -62,7 +62,6 @@ h3{
   }
   input {
     padding: 0.25rem 0.5rem;
-  
     width: 4rem;
     border-radius: var(--radius);
     border: none;
@@ -72,6 +71,7 @@ h3{
   button {
     background: var(--tertiary-colour);
   }
+
   .result {
     margin-bottom: 2rem;
   }
