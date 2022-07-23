@@ -1,0 +1,45 @@
+:root {
+    --primary-colour:white;
+    --secondary-colour: rgb(26, 26, 46);
+    --tertiary-colour: rgb(197, 8, 8);
+    --color:rgb(236, 53, 53);
+}
+body{
+    background: var(--primary-colour);
+    transition: all 0.3s linear;
+}
+h1{
+    color: var(--secondary-colour);
+    letter-spacing: 0.2rem;
+}
+.darkmode{
+    --primary-colour:#282c35;
+    --secondary-colour: white;
+    --tertiary-colour:rgb(236, 53, 53) ;
+    --color:rgb(197, 8, 8);
+}
+section{
+    max-width: 100%;
+}
+.sec{
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    gap: 50rem;
+
+}
+.btn{
+    text-transform: capitalize;
+    background: var(--tertiary-colour);
+    color: var(--primary-colour);
+    height: 2.5rem;
+    margin: 0.5rem;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    font-weight: 800;
+    border: 2px solid var(--secondary-colour);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    letter-spacing: 0.2rem;
+}
