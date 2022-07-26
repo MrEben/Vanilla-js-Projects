@@ -1,0 +1,94 @@
+:root {
+    --shadow: 0px 5px 8px rgb(177, 148, 137);
+    --transition: all 0.4s ease-in;
+    --border: 2px solid white;
+    --border-radius: 0.5rem;
+    --border-color: rgb(180, 99, 99, 0.5);
+    --primary-colour: rgb(54, 54, 15);
+    --secondary-colour: rgb(173, 173, 212);
+    --tertiary-colour: rgb(173, 173, 212);
+    --spacing: 2px;
+    --color-white: white;
+    --radius: 0.5rem;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(199, 209, 230);
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--primary-colour);
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100vh;
+}
+
+nav {
+    border-right: 3px solid var(--border-color);
+    display: grid;
+    text-align: center;
+    gap: 0.5rem;
+    height: 100%;
+    background: var(--color-white);
+}
+
+.others a {
+    text-decoration: none;
+    color: black;
+}
+
+.others a:hover {
+    color: var(--secondary-colour);
+}
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width:760px) {
+    .section {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+}
+
+.background {
+    background: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+.click {
+    text-transform: uppercase;
+    color: black;
+    background: transparent;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    transition: all 0.3s linear;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.55rem;
+    font-weight: 700px;
+}
+
+.click:hover {
+    background: rgb(173, 173, 212);
+    color: white;
+}
