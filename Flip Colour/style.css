@@ -49,6 +49,7 @@ nav {
 .others a:hover {
     color: var(--secondary-colour);
 }
+
 article {
     display: flex;
     justify-content: center;
@@ -73,6 +74,7 @@ article {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
 }
+
 .click {
     text-transform: uppercase;
     color: black;
